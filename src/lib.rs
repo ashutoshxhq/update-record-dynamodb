@@ -23,7 +23,6 @@ struct FunctionInput {
 }
 
 pub async fn handler(mut _ctx: RequestContext, _input: Value) -> Result<Value> {
-    // TODO: IMPLEMENT FUNCTION
     let context_data = serde_json::from_value::<FunctionContextData>(_ctx.data())?;
     let input_data = serde_json::from_value::<FunctionInput>(_input)?;
 
